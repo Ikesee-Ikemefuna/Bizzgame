@@ -1,5 +1,5 @@
 const post=async(endpoint, form_data)=>{
-    const fetch_data=await fetch("http://0.0.0.0:8000/api/v1/"+endpoint, {
+    const fetch_data=await fetch("https://curly-waffle-q5vqpjgg75jc5jp-8000.app.github.dev/api/v1/"+endpoint, {
         method:"post",
         body:form_data
     }).catch(err=>alert(err));
