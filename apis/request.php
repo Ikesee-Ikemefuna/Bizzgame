@@ -7,7 +7,7 @@ function post($endpoint, $should_auth=false){
     $post=json_encode($_POST);
 
     $curl_arr=[
-        CURLOPT_URL=>"https://backend-2hw1.onrender.com/api/v1/".$endpoint,
+        CURLOPT_URL=>"https://curly-waffle-q5vqpjgg75jc5jp-8000.app.github.dev/api/v1/".$endpoint,
         CURLOPT_RETURNTRANSFER=>true,
         CURLOPT_POST=>true,
         CURLOPT_POSTFIELDS=>$post,
@@ -36,7 +36,7 @@ function get($endpoint, $should_auth=false){
     $curl=curl_init();
 
     $curl_arr=[
-        CURLOPT_URL=>"https://backend-2hw1.onrender.com/api/v1/".$endpoint,
+        CURLOPT_URL=>"https://curly-waffle-q5vqpjgg75jc5jp-8000.app.github.dev/api/v1/".$endpoint,
         CURLOPT_RETURNTRANSFER=>true,
         CURLOPT_POST=>false,
         CURLOPT_FOLLOWLOCATION=>true
