@@ -21,7 +21,7 @@ const login=async(event)=>{
 
     event.target.innerHTML="Logging in now...";
 
-    const response=await post("auth/login", form_data);
+    const response=await post("login", form_data);
     if(response.token){
         set_cookie("token", response.token.access.token);
         sessionStorage.setItem("user",  JSON.stringify(response.user));
