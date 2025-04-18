@@ -9,9 +9,6 @@ app = init_app()
 
 # app.add_middleware(AuthMiddleware, db_session=session_manager)    
 
-
-
-# app.mount("/static", StaticFiles(directory="static"), name="static")
 # app.on_event("startup")
 
 @app.get('/')
