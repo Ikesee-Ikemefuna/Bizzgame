@@ -8,7 +8,7 @@ from app.app import init_app, session_manager
 from app.utils.crud.types_crud import response_message
 
 app = FastAPI();
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/", StaticFiles(directory="static"), name="static")
 
 templates=Jinja2Templates(directory="templates")
 
