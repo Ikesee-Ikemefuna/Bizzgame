@@ -1,0 +1,55 @@
+Loading .env environment variables...
+
+   FastAPI   Starting production server 🚀
+ 
+             Searching for package file structure from directories with 
+             __init__.py files
+             Importing from /workspaces/Bizzgame
+ 
+    module   🐍 main.py
+ 
+      code   Importing the FastAPI app object from the module with the following
+             code:
+ 
+             from main import app
+ 
+       app   Using import string: main:app
+ 
+    server   Server started at http://0.0.0.0:8000
+    server   Documentation at http://0.0.0.0:8000/docs
+ 
+             Logs:
+ 
+      INFO   Started server process [14496]
+      INFO   Waiting for application startup.
+/home/codespace/.local/share/virtualenvs/Bizzgame-ON2qpJkN/lib/python3.12/site-packages/pydantic/_internal/_config.py:345: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+      INFO   Application startup complete.
+     ERROR   [Errno 98] error while attempting to bind on address ('0.0.0.0(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/codespace/.local/share/virtualenvs/Bizzgame-ON2qpJkN/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-04-21 19:15:39,554 - default - ERROR - error creating user 400: {'success_status': False, 'message': 'password must be 8 character long with uppercase lowercase number and special character', 'error': 'invalid password', 'doc_length': None}
+2025-04-21 19:15:39,555 - default - INFO -  created user 400: {'success_status': False, 'message': 'password must be 8 character long with uppercase lowercase number and special character', 'error': 'invalid password', 'doc_length': None}
+      INFO   127.0.0.1:37030 - "POST /api/v1/auth/signup HTTP/1.1" 201
+2025-04-21 19:16:08,159 - default - ERROR - error creating user 400: {'success_status': False, 'message': 'password must be 8 character long with uppercase lowercase number and special character', 'error': 'invalid password', 'doc_length': None}
+2025-04-21 19:16:08,159 - default - INFO -  created user 400: {'success_status': False, 'message': 'password must be 8 character long with uppercase lowercase number and special character', 'error': 'invalid password', 'doc_length': None}
+      INFO   127.0.0.1:50068 - "POST /api/v1/auth/signup HTTP/1.1" 201
+2025-04-21 19:17:05,040 - default - ERROR - error creating user 400: {'success_status': False, 'message': 'password must be 8 character long with uppercase lowercase number and special character', 'error': 'invalid password', 'doc_length': None}
+2025-04-21 19:17:05,041 - default - INFO -  created user 400: {'success_status': False, 'message': 'password must be 8 character long with uppercase lowercase number and special character', 'error': 'invalid password', 'doc_length': None}
+      INFO   127.0.0.1:35736 - "POST /api/v1/auth/signup HTTP/1.1" 201
+2025-04-21 19:17:22,870 - default - ERROR - error creating user 400: {'success_status': False, 'message': 'password must be 8 character long with uppercase lowercase number and special character', 'error': 'invalid password', 'doc_length': None}
+2025-04-21 19:17:22,870 - default - INFO -  created user 400: {'success_status': False, 'message': 'password must be 8 character long with uppercase lowercase number and special character', 'error': 'invalid password', 'doc_length': None}
+      INFO   127.0.0.1:39450 - "POST /api/v1/auth/signup HTTP/1.1" 201
+2025-04-21 19:18:02,450 - default - ERROR - error creating user 400: {'success_status': False, 'message': 'password must be 8 character long with uppercase lowercase number and special character', 'error': 'invalid password', 'doc_length': None}
+2025-04-21 19:18:02,450 - default - INFO -  created user 400: {'success_status': False, 'message': 'password must be 8 character long with uppercase lowercase number and special character', 'error': 'invalid password', 'doc_length': None}
+      INFO   127.0.0.1:52558 - "POST /api/v1/auth/signup HTTP/1.1" 201
+2025-04-21 19:18:22,856 - default - ERROR - error creating user 400: {'success_status': False, 'message': 'password must be 8 character long with uppercase lowercase number and special character', 'error': 'invalid password', 'doc_length': None}
+2025-04-21 19:18:22,856 - default - INFO -  created user 400: {'success_status': False, 'message': 'password must be 8 character long with uppercase lowercase number and special character', 'error': 'invalid password', 'doc_length': None}
+      INFO   127.0.0.1:53980 - "POST /api/v1/auth/signup HTTP/1.1" 201
+2025-04-21 19:18:32,905 - default - ERROR - error creating user 400: {'success_status': False, 'message': 'password must be 8 character long with uppercase lowercase number and special character', 'error': 'invalid password', 'doc_length': None}
+2025-04-21 19:18:32,905 - default - INFO -  created user 400: {'success_status': False, 'message': 'password must be 8 character long with uppercase lowercase number and special character', 'error': 'invalid password', 'doc_length': None}
+      INFO   127.0.0.1:33586 - "POST /api/v1/auth/signup HTTP/1.1" 201
