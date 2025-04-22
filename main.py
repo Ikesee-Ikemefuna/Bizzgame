@@ -1,5 +1,7 @@
-from fastapi import status
-from fastapi.responses import JSONResponse
+from fastapi import status, FastAPI, Request
+from fastapi.responses import JSONResponse, HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
 
 from app.app import init_app, session_manager
 #from app.core.auth.services.middleware_auth import AuthMiddleware
@@ -11,6 +13,6 @@ app = init_app()
 
 # app.on_event("startup")
 
-@app.get('/')
-async def root():
-    return JSONResponse(status_code=status.HTTP_200_OK, content = response_message(data="welcome to skill share  project", success_status=True, message="success"))
+@app.get('/', response_class=HTMLResponse)
+async def root(request:Request):
+    return templates.TemplateResponse("index.html", {"request":request})
