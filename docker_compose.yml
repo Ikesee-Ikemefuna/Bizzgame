@@ -1,0 +1,10 @@
+services:
+  php:
+    image: php:latest
+    build:
+      target: php
+    volumes:
+      - /var/BIZZGAME
+    
+  fastapi:
+    image:fastapi:latest

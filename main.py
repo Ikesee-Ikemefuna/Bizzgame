@@ -6,7 +6,9 @@ from fastapi.templating import Jinja2Templates
 from app.app import init_app, session_manager
 #from app.core.auth.services.middleware_auth import AuthMiddleware
 from app.utils.crud.types_crud import response_message
-import templates
+# import templates
+templates = Jinja2Templates(directory="templates")
+
 
 app = init_app()
 

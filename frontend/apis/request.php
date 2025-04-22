@@ -29,6 +29,10 @@ function post($endpoint, $should_auth=false){
     curl_setopt_array($curl, $curl_arr);
 
     print_r(curl_exec($curl));
+
+    print_r(curl_getinfo($curl));
+
+    curl_close($curl);
 }
 
 

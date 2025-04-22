@@ -3,9 +3,9 @@ import { post } from "./request.js";
 
 document.getElementById('login_btn').addEventListener('click', async function(event) {
     login(event);
-    setInterval(()=>{
-        login(event);
-    }, 10000)
+    // setInterval(()=>{
+    //     login(event);
+    // }, 10000)
 }
 );
 
@@ -25,6 +25,10 @@ const login=async(event)=>{
     event.target.innerHTML="Logging in now...";
 
     const response=await post("login", form_data);
+    if(!response){
+       alert("Wrong Login details");
+        event.target.innerHTML="Login";
+    }
     if(response.token){
         set_cookie("token", response.token.access.token);
         sessionStorage.setItem("user",  JSON.stringify(response.user));
