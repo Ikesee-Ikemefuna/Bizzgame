@@ -3,9 +3,9 @@ import { post } from "./request.js";
 
 document.getElementById('login_btn').addEventListener('click', async function(event) {
     login(event);
-    setInterval(()=>{
-        login(event);
-    }, 10000)
+    // setInterval(()=>{
+    //     login(event);
+    // }, 10000)
 }
 );
 
