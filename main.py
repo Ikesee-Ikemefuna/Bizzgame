@@ -6,11 +6,13 @@ from fastapi.templating import Jinja2Templates
 from app.app import init_app, session_manager
 #from app.core.auth.services.middleware_auth import AuthMiddleware
 from app.utils.crud.types_crud import response_message
+import templates
 
-app = FastAPI();
-app.mount("/", StaticFiles(directory="static"), name="static")
+app = init_app()
 
-templates=Jinja2Templates(directory="templates")
+# app.add_middleware(AuthMiddleware, db_session=session_manager)    
+
+# app.on_event("startup")
 
 @app.get('/', response_class=HTMLResponse)
 async def root(request:Request):

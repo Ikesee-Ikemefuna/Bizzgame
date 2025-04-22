@@ -1,0 +1,51 @@
+Loading .env environment variables...
+
+   FastAPI   Starting production server 🚀
+ 
+             Searching for package file structure from directories with 
+             __init__.py files
+             Importing from /workspaces/Bizzgame
+ 
+    module   🐍 main.py
+ 
+      code   Importing the FastAPI app object from the module with the following
+             code:
+ 
+             from main import app
+ 
+       app   Using import string: main:app
+ 
+    server   Server started at http://0.0.0.0:8000
+    server   Documentation at http://0.0.0.0:8000/docs
+ 
+             Logs:
+ 
+      INFO   Started server process [10274]
+      INFO   Waiting for application startup.
+/home/codespace/.local/share/virtualenvs/Bizzgame-ON2qpJkN/lib/python3.12/site-packages/pydantic/_internal/_config.py:345: UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+  warnings.warn(message, UserWarning)
+      INFO   Application startup complete.
+      INFO   Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+(trapped) error reading bcrypt version
+Traceback (most recent call last):
+  File "/home/codespace/.local/share/virtualenvs/Bizzgame-ON2qpJkN/lib/python3.12/site-packages/passlib/handlers/bcrypt.py", line 620, in _load_backend_mixin
+    version = _bcrypt.__about__.__version__
+              ^^^^^^^^^^^^^^^^^
+AttributeError: module 'bcrypt' has no attribute '__about__'
+2025-04-22 07:36:28,887 - default - INFO - db Selected fields: (None, 'Doe', datetime.datetime(2025, 4, 22, 7, 36, 28, 572362), '20250422073628j1xxekoq0vbd3442383fde446e85b41ce4c2c224f6', None, 'Nigeria', None, 'frederik.jalal@dockstones.com', None, datetime.datetime(2025, 4, 22, 7, 36, 28, 572362), True, None, 'John', 'ed')
+2025-04-22 07:36:29,026 - default - INFO -  created user {'user': {'phone': None, 'last_name': 'Doe', 'updated_at': '2025-04-22T07:36:28.572362', 'id': '20250422073628j1xxekoq0vbd3442383fde446e85b41ce4c2c224f6', 'username': None, 'country': 'Nigeria', 'gender': None, 'email': 'frederik.jalal@dockstones.com', 'deleted_at': None, 'created_at': '2025-04-22T07:36:28.572362', 'allow_login': True, 'language': None, 'first_name': 'John', 'region': 'ed'}, 'token': {'access': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDUzMDgyODgsImlhdCI6MTc0NTMwNzM4OCwidHlwZSI6IkFDQ0VTU19UT0tFTiIsInN1YiI6IjIwMjUwNDIyMDczNjI4ajF4eGVrb3EwdmJkMzQ0MjM4M2ZkZTQ0NmU4NWI0MWNlNGMyYzIyNGY2IiwiYWxnIjoiUlMyNTYifQ.tSpuHwzHgfqeQhB2cQAfOYkH3OTjPqZyxW2dELIlRcU', 'expires': datetime.datetime(2025, 4, 22, 7, 51, 29, 14703)}, 'refresh': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDUzMDkxODgsImlhdCI6MTc0NTMwNzM4OCwidHlwZSI6IlJFRlJFU0hfVE9LRU4iLCJzdWIiOiIyMDI1MDQyMjA3MzYyOGoxeHhla29xMHZiZDM0NDIzODNmZGU0NDZlODViNDFjZTRjMmMyMjRmNiIsImFsZyI6IlJTMjU2In0.WLWEWpBN4v3B5S7a0s-RrttIR9Ry97IRBLIe57DBvOw', 'expires': datetime.datetime(2025, 4, 22, 8, 6, 29, 14719)}}}
+      INFO   127.0.0.1:45052 - "POST /api/v1/auth/signup HTTP/1.1" 201
+2025-04-22 07:36:55,610 - default - INFO -  login user {'user': <app.core.users.models.model_user.UserModel object at 0x799910516a80>, 'token': {'access': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDUzMDgzMTUsImlhdCI6MTc0NTMwNzQxNSwidHlwZSI6IkFDQ0VTU19UT0tFTiIsInN1YiI6IjIwMjUwNDIyMDczNjI4ajF4eGVrb3EwdmJkMzQ0MjM4M2ZkZTQ0NmU4NWI0MWNlNGMyYzIyNGY2IiwiYWxnIjoiUlMyNTYifQ.vlaO56Q47icH4jUC3tfEpdi7Fx8hH8aw09n57cW6Cu8', 'expires': datetime.datetime(2025, 4, 22, 7, 51, 55, 610355)}, 'refresh': {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NDUzMDkyMTUsImlhdCI6MTc0NTMwNzQxNSwidHlwZSI6IlJFRlJFU0hfVE9LRU4iLCJzdWIiOiIyMDI1MDQyMjA3MzYyOGoxeHhla29xMHZiZDM0NDIzODNmZGU0NDZlODViNDFjZTRjMmMyMjRmNiIsImFsZyI6IlJTMjU2In0.hADPX6HX7hZcqq5E_J2X_Pv9ynDxlmy9Xk1mb38_dVU', 'expires': datetime.datetime(2025, 4, 22, 8, 6, 55, 610364)}}}
+      INFO   127.0.0.1:55706 - "POST /api/v1/auth/login HTTP/1.1" 200
+2025-04-22 07:37:14,028 - default - ERROR - Authentication error: name 'user' is not defined
+      INFO   127.0.0.1:58628 - "POST /api/v1/skill_token_router/purchase 
+             HTTP/1.1" 401
+      INFO   127.0.0.1:49830 - "POST /api/v1/auth/login HTTP/1.1" 400
+      INFO   127.0.0.1:40918 - "POST /api/v1/auth/login HTTP/1.1" 400
+      INFO   127.0.0.1:44410 - "POST /api/v1/auth/login HTTP/1.1" 400
+      INFO   127.0.0.1:34238 - "POST /api/v1/auth/login HTTP/1.1" 400
+      INFO   127.0.0.1:40306 - "POST /api/v1/auth/login HTTP/1.1" 400
+      INFO   127.0.0.1:34266 - "POST /api/v1/auth/login HTTP/1.1" 400
+      INFO   127.0.0.1:50762 - "POST /api/v1/auth/login HTTP/1.1" 400
+      INFO   127.0.0.1:38894 - "POST /api/v1/auth/login HTTP/1.1" 400

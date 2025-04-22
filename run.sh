@@ -21,12 +21,11 @@ if [ ! -f ".env" ]; then
         echo "❌ ========================================================== ❌"
         exit 1
     fi
-    
+
     echo ""
     echo "⚠️  Please review your .env file before continuing!           ⚠️"
     echo "⚠️  Press Enter to continue or Ctrl+C to abort...             ⚠️"
-    echo " "
-   
+    read
 fi
 
 # Install pip if not installed
@@ -49,6 +48,14 @@ if [ -f "requirements.txt" ]; then
     pipenv run pip install -r requirements.txt
 fi
 
-# Run the FastAPI app
-echo "Starting FastAPI server..."
-pipenv run fastapi run
+# Run the FastAPI server in the background
+echo "🚀 Starting FastAPI server using 'fastapi run'..."
+nohup pipenv run fastapi run --host 0.0.0.0 --port 8000 > fastapi.log 2>&1 &
+
+# Wait for FastAPI to initialize
+sleep 2
+
+# Start PHP Server
+echo "🌐 Starting PHP server on http://localhost:5000 ..."
+cd frontend
+php -S localhost:5000
